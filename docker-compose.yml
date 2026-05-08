@@ -35,8 +35,8 @@ services:
       - pg-master
       - pg-slave
     environment:
-      - ConnectionStrings__MasterDb=Host=pg-master;Port=5432;Database=mydb;Username=myuser;Password=mypassword;
-      - ConnectionStrings__SlaveDb=Host=pg-slave;Port=5432;Database=mydb;Username=myuser;Password=mypassword;
+      ConnectionStrings__MasterDb: "Host=pg-master;Port=5432;Database=mydb;Username=myuser;Password=mypassword;"
+      ConnectionStrings__SlaveDb: "Host=pg-slave;Port=5432;Database=mydb;Username=myuser;Password=mypassword;"
 
   # --- API NODE 2 ---
   api_node_2:
@@ -45,8 +45,8 @@ services:
       - pg-master
       - pg-slave
     environment:
-      - ConnectionStrings__MasterDb=Host=pg-master;Port=5432;Database=mydb;Username=myuser;Password=mypassword;
-      - ConnectionStrings__SlaveDb=Host=pg-slave;Port=5432;Database=mydb;Username=myuser;Password=mypassword;
+      ConnectionStrings__MasterDb: "Host=pg-master;Port=5432;Database=mydb;Username=myuser;Password=mypassword;"
+      ConnectionStrings__SlaveDb: "Host=pg-slave;Port=5432;Database=mydb;Username=myuser;Password=mypassword;"
 
   # --- LOAD BALANCER ---
   nginx_lb:
